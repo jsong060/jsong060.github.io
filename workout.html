@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <title>Appointment Page</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('bg.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          color: black;
+        }
+    </style>
+    <div class = "container-fluid p-5">
+        <div class="row">
+            <div class="col-10 ">
+              <a href="index.html"><img src="banner2.png" alt="service logo" style="object-fit: fill; width: 1300px;height: 100px;"></a>
+            </div>
+            <div class="col-2 text-end ">
+                <button type="button" class="btn btn-outline-secondary" id="credentialBtn" onclick="tologin()">Sign in / up</button>
+            </div>
+        </div>
+
+        <div class="row mt-3 text-center">
+            <div class="col ">
+                <button type="button" class="btn btn-outline-dark " id="appointmentBtn" onclick="toAppointment()">Schedule Appointment</button>
+            </div>
+              <div class="col ">
+                <button type="button" class="btn btn-outline-dark " id="priceBtn" onclick="toPrices()">Membership and Programs</button>
+              </div>
+              <div class="col  ">
+                <button type="button" class="btn btn-dark" id="workoutBtn" onclick="toWorkout()">Workouts</button>
+              </div>
+              <div class="col ">
+                <button type="button" class="btn btn-outline-dark " id="locationBtn" onclick="toLocations()">Locations</button>
+              </div>
+              <div class="col ">
+                <button type="button" class="btn btn-outline-dark" id="trainerBtn" onclick="toTrainers()">Our Trainers</button>
+              </div>
+        </div>
+    </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mx-4">
+              <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
+              <li class="breadcrumb-item active text-dark" aria-current="page">Workouts</li>
+            </ol>
+          </nav>
+        <div class="row">
+            <div class="col-8">
+                <div class="row mt-2 mx-2">
+                    <h5>Areas to target</h5>
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Biceps
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Triceps
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Trapezius 
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Obliques
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Upper Abs
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Deltoids
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Upper Chest
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Thigh
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Glutes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Calves
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Lower Back
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Forearms
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Squash
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Mid abs
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Lower abs
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="expDeadlift">
+                            <label class="form-check-label" for="expDeadlift">
+                                Mid Chest
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <h5>Intensity</h5>
+                <select class="form-select" aria-label="trainerLocation" style="max-width: 300px;">
+                    <option value="">Please choose an option</option>
+                    <option value="1">Beginner</option>
+                    <option value="2">Intermediate</option>
+                    <option value="3">Enthusiasts</option>
+                    <option value="4">Professional</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container mt-4" style="color: black;">
+            <div class="d-flex">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">Push ups</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                      
+                    </div>
+                </div>
+    
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">Sit ups</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                    
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">Pull ups</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                      
+                    </div>
+                </div>
+    
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                     
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                    
+                    </div>
+                </div>
+    
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                   
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                 
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+                    
+                    </div>
+                </div>
+    
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+
+                    </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="gym-background.jpg" width="400" height="200" class="card-img-top" alt="workout1">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="workoutEx.html" class="text-dark">workout name</a> </h5>
+                      <p class="card-text">workout routine description</p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>About us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta saepe cumque sunt! Nam maiores vitae laboriosam animi quia. Iure nesciunt libero sequi, nulla facere eligendi voluptatem reiciendis excepturi laboriosam commodi.</p>
+                    </div>
+            
+                    <div class="col-md-4">
+                        <h3>Subscribe</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, odio beatae accusantium.
+                        </p>
+                        <form action="#">
+                          <div class="d-flex mb-5">
+                              <input type="text" class="form-control rounded-0" placeholder="Email">
+                              <button type="submit" class="btn btn-outline-dark rounded-0" data-bs-toggle="modal" data-bs-target="#subscribeModal" >Subscribe</button>
+                          </div>
+    
+                          <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  Subscribed!
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </footer>
+
+    <script>
+        function toWorkout() {
+            location = "workout.html"
+        }
+
+        function toAppointment() {
+            location = "appointmentMain.html"
+        }
+
+        function toPrices() {
+            location = "prices.html"
+            
+        }
+
+        function toTrainers() {
+            location = "trainers.html"
+        }
+
+        function toLocations() {
+            location = "locations.html"
+        }
+
+        function tologin() {
+            location = "login.html"
+        }
+    </script>
+</body>
+</html>

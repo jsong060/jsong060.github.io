@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('bg.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <div class = "container-fluid p-5">
+        <div class="row">
+            <div class="col-10 ">
+              <a href="index.html"><img src="banner2.png" alt="service logo" style="object-fit: fill; width: 1300px;height: 100px;"></a>
+            </div>
+            <div class="col-2 text-end ">
+                <button type="button" class="btn btn-outline-secondary" id="credentialBtn" onclick="tologin()">Sign in / up</button>
+            </div>
+        </div>
+
+        <div class="row mt-3 text-center">
+            <div class="col ">
+                <button type="button" class="btn btn-outline-dark " id="appointmentBtn" onclick="toAppointment()">Schedule Appointment</button>
+            </div>
+              <div class="col ">
+                <button type="button" class="btn btn-dark " id="priceBtn" onclick="toPrices()">Membership and Programs</button>
+              </div>
+              <div class="col  ">
+                <button type="button" class="btn btn-outline-dark" id="workoutBtn" onclick="toWorkout()">Workouts</button>
+              </div>
+              <div class="col ">
+                <button type="button" class="btn btn-outline-dark " id="locationBtn" onclick="toLocations()">Locations</button>
+              </div>
+              <div class="col ">
+                <button type="button" class="btn btn-outline-dark" id="trainerBtn" onclick="toTrainers()">Our Trainers</button>
+              </div>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mx-4">
+          <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
+          <li class="breadcrumb-item active text-dark" aria-current="page">Memberships and Programs</li>
+        </ol>
+      </nav>
+    <h2 class="my-5 text-center">Gym Memberships</h2>
+    <div class="d-flex justify-content-evenly mt-4">
+        
+            <div class="card text-center" style="max-width: 300px;">
+            
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">No commitment + $20 biweekly</h5>
+                    <p class="card-text">Enjoy our gym membership without having to pay upfront</p>
+                    <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+                </div>
+            </div>
+
+
+            <div class="card text-center" style="max-width: 300px;">
+            
+                <div class="card-header">
+                    Basic
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">$50 one-time commitment fee + $10 biweekly</h5>
+                    <p class="card-text">Standard membership, with access to your local gym</p>
+                    <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+                </div>
+            </div>
+
+
+            <div class="card text-center" style="max-width: 300px;">
+            
+                <div class="card-header">
+                    Premium
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">$75 one-time commitment fee + $15 biweekly</h5>
+                    <p class="card-text">Premium membership with nationwide gym access</p>
+                    <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+                </div>
+            </div>
+
+    </div>
+
+    <h2 class="my-5 text-center">Sport program</h2>
+    <div class="d-flex justify-content-evenly mt-4">
+        <div class="card text-center" style="max-width: 300px;">
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Soccer</h5>
+                <p class="card-text">Enjoy our gym membership along with soccer-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+        <div class="card text-center" style="max-width: 300px;">
+        
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Hockey</h5>
+                <p class="card-text">Enjoy our gym membership along with hockey-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+        <div class="card text-center" style="max-width: 300px;">
+        
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Basketball</h5>
+                <p class="card-text">Enjoy our gym membership along with basketball-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly mt-4">
+        <div class="card text-center" style="max-width: 300px;">
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Rockclimbing</h5>
+                <p class="card-text">Enjoy our gym membership along with basketball-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+        <div class="card text-center" style="max-width: 300px;">
+        
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gymnastics</h5>
+                <p class="card-text">Enjoy our gym membership along with gymnastics-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+        <div class="card text-center" style="max-width: 300px;">
+        
+            <div class="card-header">
+                Sports
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Swimming</h5>
+                <p class="card-text">Enjoy our gym membership along with s  wimming-focused training</p>
+                <a href="appointmentMain.html" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta saepe cumque sunt! Nam maiores vitae laboriosam animi quia. Iure nesciunt libero sequi, nulla facere eligendi voluptatem reiciendis excepturi laboriosam commodi.</p>
+                </div>
+        
+                <div class="col-md-4">
+                    <h3>Subscribe</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, odio beatae accusantium.
+                    </p>
+                    <form action="#">
+                      <div class="d-flex mb-5">
+                          <input type="text" class="form-control rounded-0" placeholder="Email">
+                          <button type="submit" class="btn btn-outline-dark rounded-0" data-bs-toggle="modal" data-bs-target="#subscribeModal" >Subscribe</button>
+                      </div>
+
+                      <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Subscribed!
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+    <script>
+        function toWorkout() {
+            location = "workout.html"
+        }
+
+        function toAppointment() {
+            location = "appointmentMain.html"
+        }
+
+        function toPrices() {
+            location = "prices.html"
+            
+        }
+
+        function toTrainers() {
+            location = "trainers.html"
+        }
+
+        function toLocations() {
+            location = "locations.html"
+        }
+        function tologin() {
+            location = "login.html"
+        }
+    </script>
+</body>
+</html>
